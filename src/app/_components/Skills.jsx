@@ -5,8 +5,8 @@ import React from 'react';
 const Skills = async () => {
     const data = await getAllData();
 
-    // const sortedSkills = data.user.skills.filter(skill => skill.enabled).sort((a, b) => a.sequence - b.sequence);
-    const sortedSkills = data.user.skills.sort((a, b) => a.sequence - b.sequence);
+    const sortedSkills = data.user.skills.filter(skill => skill.enabled).sort((a, b) => a.sequence - b.sequence);
+    // const sortedSkills = data.user.skills.sort((a, b) => a.sequence - b.sequence);
 
     return (
         <div>
