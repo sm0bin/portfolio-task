@@ -5,7 +5,6 @@ import SectionHead from '../_utils/SectionHead';
 
 const Skills = ({ data }) => {
     const sortedSkills = data.user.skills.filter(skill => skill.enabled).sort((a, b) => a.sequence - b.sequence);
-    // const sortedSkills = data.user.skills.sort((a, b) => a.sequence - b.sequence);
 
     return (
         <div>
@@ -21,7 +20,6 @@ const Skills = ({ data }) => {
                     // </div>
                     <div className="card bg-base-100 group hover:relative hover:z-20 ">
                         <figure className="px-10 pt-10 group-hover:scale-125 transition duration-300">
-                            {/* <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" /> */}
                             <Image src={skill.image.url} alt={skill.name} width={500} height={500} className="" />
                         </figure>
                         <div className="card-body items-center text-center">
