@@ -2,9 +2,7 @@ import { getAllData } from '@/utils/getAllData';
 import Image from 'next/image';
 import React from 'react';
 
-const Skills = async () => {
-    const data = await getAllData();
-
+const Skills = ({ data }) => {
     const sortedSkills = data.user.skills.filter(skill => skill.enabled).sort((a, b) => a.sequence - b.sequence);
     // const sortedSkills = data.user.skills.sort((a, b) => a.sequence - b.sequence);
 

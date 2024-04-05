@@ -2,8 +2,7 @@ import { getAllData } from '@/utils/getAllData';
 import Image from 'next/image';
 import React from 'react';
 
-const Projects = async () => {
-    const data = await getAllData();
+const Projects = ({ data }) => {
     const sortedProjects = data.user.projects.filter(skill => skill.enabled).sort((a, b) => a.sequence - b.sequence);
 
     return (

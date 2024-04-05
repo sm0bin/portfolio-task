@@ -7,29 +7,22 @@ import Projects from "./_components/Projects";
 import Timeline from "./_components/Timeline";
 import Testimonial from "./_components/Testimonial";
 import Contact from "./_components/Contact";
+import { getAllData } from "@/utils/getAllData";
 
-export default function Home() {
+
+export default async function Home() {
+  const data = await getAllData();
+
   return (
-    // Hero
-    // About
-    // Services
-    // Skills
-    // Projects (with custom modal for a detailed overview)
-    // Timeline (divided into Education and Experience)
-    // Testimonial (Auto Slide format)
-    // Contact Form
-    <main>
-      <Hero />
-      <About />
-      <Skills />
-      <Services />
-      <Projects />
-      <Timeline />
-      <Testimonial />
-      <Contact />
-
-
-
+    <main className="px-6" data-theme="light">
+      <Hero data={data} />
+      <About data={data} />
+      <Services data={data} />
+      <Skills data={data} />
+      <Projects data={data} />
+      <Timeline data={data} />
+      {/* <Testimonial data={data} /> */}
+      <Contact data={data} />
     </main>
   );
 }

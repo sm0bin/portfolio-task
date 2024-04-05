@@ -2,8 +2,7 @@ import { getAllData } from '@/utils/getAllData';
 import Image from 'next/image';
 import React from 'react';
 
-const About = async () => {
-    const data = await getAllData();
+const About = ({ data }) => {
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">

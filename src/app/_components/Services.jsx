@@ -1,15 +1,13 @@
-import { getAllData } from '@/utils/getAllData';
 import Image from 'next/image';
 import React from 'react';
 
-const Services = async () => {
-    const services = await getAllData();
+const Services = ({ data }) => {
 
     return (
         <div>
             <h2>Services</h2>
             <div className="grid grid-cols-3 gap-4">
-                {services.user.services.map(service => (
+                {data.user.services.map(service => (
                     <div className="card card-compact bg-base-100 shadow-xl">
                         <figure>
                             <Image src={service.image.url} alt={service.name} width={500} height={500} className="rounded-xl" />
