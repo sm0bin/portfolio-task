@@ -1,16 +1,17 @@
 import Image from 'next/image';
 import React from 'react';
+import SectionHead from '../_utils/SectionHead';
 
 const Services = ({ data }) => {
 
     return (
         <div>
-            <h2>Services</h2>
+            <SectionHead title={'Services'} />
             <div className="grid grid-cols-3 gap-4">
                 {data.user.services.map(service => (
                     <div className="card card-compact bg-base-100 shadow-xl">
                         <figure>
-                            <Image src={service.image.url} alt={service.name} width={500} height={500} className="rounded-xl" />
+                            <Image src={service.image.url} alt={service.name} width={500} height={500} className="" />
                         </figure>
                         <div className="card-body">
                             <h2 className="card-title">{service.name}</h2>

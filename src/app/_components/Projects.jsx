@@ -1,18 +1,18 @@
-import { getAllData } from '@/utils/getAllData';
 import Image from 'next/image';
 import React from 'react';
+import SectionHead from '../_utils/SectionHead';
 
 const Projects = ({ data }) => {
     const sortedProjects = data.user.projects.filter(skill => skill.enabled).sort((a, b) => a.sequence - b.sequence);
 
     return (
         <div>
-            <h2>Projects</h2>
+            <SectionHead title={'Projects'} />
             <div className="grid grid-cols-3 gap-4">
                 {sortedProjects.map(project => (
                     <div className="card bg-base-100 shadow-xl">
                         <figure>
-                            <Image src={project.image.url} alt={project.name} width={500} height={500} className="rounded-xl" />
+                            <Image src={project.image.url} alt={project.name} width={500} height={500} className="" />
                         </figure>
                         <div className="card-body">
                             <h2 className="card-title">
