@@ -9,9 +9,9 @@ const Services = ({ data }) => {
             <SectionHead title={'Services'} />
             <div className="grid grid-cols-3 gap-4">
                 {data.user.services.map(service => (
-                    <div className="card card-compact bg-base-100 shadow-xl">
+                    <div className="card card-compact bg-base-100 border shadow-sm">
                         <figure>
-                            <Image src={service.image.url} alt={service.name} width={500} height={500} className="" />
+                            <Image src={service.image.url} alt={service.name} width={500} height={500} className="h-96" />
                         </figure>
                         <div className="card-body">
                             <h2 className="card-title">{service.name}</h2>

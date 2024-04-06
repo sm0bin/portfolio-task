@@ -31,13 +31,6 @@ const Projects = ({ data }) => {
                                     onClick={() => handleShowProject(project)}
                                     className="btn btn-primary">See Details</button>
                             </div>
-                            {/* <div className="card-actions justify-end">
-                                {
-                                    project.techStack.map(tech => (
-                                        <div className="badge badge-outline">{tech}</div>
-                                    ))
-                                }
-                            </div> */}
                         </div>
                     </div>
                 ))}
@@ -62,9 +55,6 @@ const Projects = ({ data }) => {
                     <div className="modal-action">
                         <a href={selectedProject.liveurl} target="_blank" className="btn btn-info">View Website</a>
                         <a href={selectedProject.githuburl} target="_blank" className="btn btn-info">View Code</a>
-                        {/* <form method="dialog">
-                            <button className="btn btn-error">Close</button>
-                        </form> */}
                         <form method="dialog">
                             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 z-[1000]">✕</button>
                         </form>
