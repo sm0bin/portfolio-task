@@ -7,21 +7,25 @@ import Timeline from "./_components/Timeline";
 import Testimonial from "./_components/Testimonial";
 import Contact from "./_components/Contact";
 import { getAllData } from "@/utils/getAllData";
+import Footer from "./_components/Footer";
 
 
 export default async function Home() {
   const data = await getAllData();
 
   return (
-    <main className="px-6" data-theme="bumblebee">
+    <div data-theme="bumblebee">
       <Hero data={data} />
-      <About data={data} />
-      <Services data={data} />
-      <Skills data={data} />
-      <Projects data={data} />
-      <Timeline data={data} />
-      <Testimonial data={data} />
-      <Contact data={data} />
-    </main>
+      <main className="px-6" >
+        <About data={data} />
+        <Services data={data} />
+        <Skills data={data} />
+        <Projects data={data} />
+        <Timeline data={data} />
+        <Testimonial data={data} />
+        <Contact data={data} />
+      </main>
+      <Footer data={data} />
+    </div>
   );
 }

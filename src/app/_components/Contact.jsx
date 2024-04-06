@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Contact = () => {
+const Contact = ({ data }) => {
     return (
         <div>
-
+            Contact
         </div>
     );
 };
